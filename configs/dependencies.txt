@@ -1,0 +1,11 @@
+i3
+compton
+nitrogen
+dunst
+polybar
+roli
+yad 
+xdotool
+
+
+virtualbox
