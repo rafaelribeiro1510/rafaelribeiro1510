@@ -75,15 +75,16 @@ interval = 2.0
 ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
 label-connected = %essid%
 label-disconnected =    not connected
 label-disconnected-foreground = #66
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 =   0%  
+ramp-signal-1 =  25% 
+ramp-signal-2 =  50% 
+ramp-signal-3 =  75% 
+ramp-signal-4 = 100% 
 
 animation-packetloss-0 = 
 animation-packetloss-0-foreground = #ffa64c
