@@ -20,6 +20,7 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+j focus left
@@ -217,7 +218,7 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # Theme colors
-client.focused #b0c4bb #2f2f38 #b0c4bb #81a2be #81a2be
+client.focused #ff007f #2f2f38 #b0c4bb #81a2be #ff007f
 client.focused_inactive #b0c4bb #2f2f38 #b0c4bb #688486 #688486
 client.unfocused #b0c4bb #2f2f38 #b0c4bb #688486 #688486
 client.urgent #b0c4bb #2f2f38 #b0c4bb #688486 #688486
@@ -226,10 +227,12 @@ client.placeholder #b0c4bb #2f2f38 #b0c4bb #688486 #688486
 client.background #2f2f38
 
 # Gaps
-gaps inner 10
+gaps inner 6
 gaps outer -4
 
 smart_gaps on
+
+default_border pixel 10
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -295,4 +298,6 @@ for_window [class="Yad" title="yad-calendar"] floating enable
 # dunst for notifications
 exec killall -q notify-osd
 exec --no-startup-id dunst -config ~/.config/dunst/config
+
+
 
