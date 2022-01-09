@@ -160,7 +160,7 @@ for_window [class="Yad" title="yad-calendar"] floating enable border normal
 # Open specific applications in certain workspaces
 assign [class="google-chrome"] $ws1
 assign [class="discord"] $ws2
-assign [class="github desktop"] $ws3
+assign [class="GitHub Desktop"] $ws3
 
 # Open on startup
 exec google-chrome
@@ -231,13 +231,13 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # Theme colors
-client.focused #ff007f #2f2f38 #b0c4bb #81a2be #ff007f
-client.focused_inactive #b0c4bb #2f2f38 #b0c4bb #688486 #688486
-client.unfocused #b0c4bb #2f2f38 #b0c4bb #688486 #688486
-client.urgent #b0c4bb #2f2f38 #b0c4bb #688486 #688486
-client.placeholder #b0c4bb #2f2f38 #b0c4bb #688486 #688486
+client.focused          #ff007f #282a36 #b0c4bb #81a2be #ff007f
+client.focused_inactive #b0c4bb #282a36 #b0c4bb #688486 #688486
+client.unfocused        #b0c4bb #282a36 #b0c4bb #688486 #688486
+client.urgent           #b0c4bb #282a36 #b0c4bb #688486 #688486
+client.placeholder      #b0c4bb #282a36 #b0c4bb #688486 #688486
 
-client.background #2f2f38
+client.background #282a36
 
 # Gaps
 gaps inner 6
