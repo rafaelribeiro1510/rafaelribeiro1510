@@ -292,6 +292,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/polybar/scripts/pavo
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/polybar/scripts/pavolume.sh --down #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id ~/.config/polybar/scripts/pavolume.sh --togmute     #mute sound
 
+# Playback controls
+bindsym $mod+KP_Multiply exec --no-startup-id playerctl play-pause
+bindsym $mod+KP_Divide exec --no-startup-id playerctl previous
+bindsym $mod+KP_Subtract exec --no-startup-id playerctl next
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
