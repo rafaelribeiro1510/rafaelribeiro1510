@@ -4,7 +4,7 @@ height = 27
 radius = 0
 fixed-center = true
 
-background = #2f2f38
+background = #282a36
 foreground = #b0c4bb
 
 line-size = 3
