@@ -25,7 +25,7 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 
 modules-left = network docker
 modules-center = i3
-modules-right = now-playing battery pavolume popup-calendar powermenu
+modules-right = now-playing battery pavolume popup-calendar
 
 tray-position =
 ;tray-padding =
@@ -91,57 +91,6 @@ animation-packetloss-0-foreground = #ffa64c
 animation-packetloss-1 = 
 animation-packetloss-1-foreground = #2f2f38
 animation-packetloss-framerate = 500
-
-[module/date]
-type = internal/date
-interval = 1
-
-date = " %d-%m-%Y"
-
-time = %H:%M:%S
-
-format-prefix = 
-format-foreground = #2f2f38
-format-background = #81a2be
-format-padding = 2
-
-label = %date% | %time%
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = #81a2be
-label-close =  cancel
-label-close-foreground = #81a2be
-label-separator = |
-label-separator-foreground = #81a2be
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-menu-0-2 = log off
-menu-0-2-exec = menu-open-3
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = reboot
-
-menu-2-0 = power off
-menu-2-0-exec = poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-menu-3-0 = log off
-menu-3-0-exec = i3 exit logout
-menu-3-1 = cancel
-menu-3-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
