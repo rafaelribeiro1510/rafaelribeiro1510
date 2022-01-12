@@ -89,6 +89,9 @@ bindsym $mod+Ctrl+Left workspace prev
 set $monitor1 eDP-1
 set $monitor2 HDMI-2
 
+# Startup second monitor
+exec --no-startup-id xrandr --output $monitor2 --above $monitor1
+
 # workspaces
 set $ws1 1
 set $ws2 2
@@ -100,14 +103,14 @@ set $ws7 7
 set $ws8 8
 
 # workspaces on each monitor
-workspace $ws1 output $monitor1
-workspace $ws2 output $monitor2
-workspace $ws3 output $monitor1
-workspace $ws4 output $monitor2
-workspace $ws5 output $monitor1
-workspace $ws6 output $monitor2
-workspace $ws7 output $monitor1
-workspace $ws8 output $monitor2
+workspace $ws1 output $monitor2
+workspace $ws2 output $monitor1
+workspace $ws3 output $monitor2
+workspace $ws4 output $monitor1
+workspace $ws5 output $monitor2
+workspace $ws6 output $monitor1
+workspace $ws7 output $monitor2
+workspace $ws8 output $monitor1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -180,9 +183,6 @@ assign [class="GitHub Desktop"] $ws3
 exec google-chrome
 exec discord
 exec github-desktop
-
-# Startup second monitor
-exec --no-startup-id xrandr --output $monitor2 --above $monitor1
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
