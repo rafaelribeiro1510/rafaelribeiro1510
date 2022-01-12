@@ -23,7 +23,7 @@ font-0 = "Source Code Pro Semibold:size=10;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
 font-2 = "Font Awesome 5 Brands:size=10;1"
 
-modules-left = network docker
+modules-left = network bluetooth docker
 modules-center = i3
 modules-right = now-playing battery pavolume popup-calendar
 
@@ -67,6 +67,11 @@ label-visible-padding = 2
 label-urgent = %index%
 label-urgent-background = #ff007f
 label-urgent-padding = 2
+
+[module/bluetooth]
+type = custom/text
+click-left = blueman-manager
+content = 
 
 [module/network]
 type = internal/network
