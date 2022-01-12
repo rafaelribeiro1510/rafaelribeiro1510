@@ -85,6 +85,10 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
+# monitors
+set $monitor1 eDP-1
+set $monitor2 HDMI-2
+
 # workspaces
 set $ws1 1
 set $ws2 2
@@ -94,6 +98,16 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
+
+# workspaces on each monitor
+workspace $ws1 output $monitor1
+workspace $ws2 output $monitor2
+workspace $ws3 output $monitor1
+workspace $ws4 output $monitor2
+workspace $ws5 output $monitor1
+workspace $ws6 output $monitor2
+workspace $ws7 output $monitor1
+workspace $ws8 output $monitor2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -156,7 +170,6 @@ for_window [class="Xfburn"] floating enable
 for_window [class="Zoom"] floating enable border normal
 for_window [class="Yad" title="yad-calendar"] floating enable border normal
 
-
 # Open specific applications in certain workspaces
 assign [class="google-chrome"] $ws1
 assign [class="discord"] $ws2
@@ -166,6 +179,9 @@ assign [class="GitHub Desktop"] $ws3
 exec google-chrome
 exec discord
 exec github-desktop
+
+# Startup second monitor
+exec --no-startup-id xrandr --output $monitor2 --above $monitor1
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
