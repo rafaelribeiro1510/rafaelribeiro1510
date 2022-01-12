@@ -247,7 +247,7 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # Theme colors
-client.focused          #ff007f #282a36 #b0c4bb #ffffff #ff007f
+client.focused          #ff007f #282a36 #b0c4bb #b0c4bb #ff007f
 client.focused_inactive #b0c4bb #282a36 #b0c4bb #688486 #688486
 client.unfocused        #b0c4bb #282a36 #b0c4bb #688486 #688486
 client.urgent           #b0c4bb #282a36 #b0c4bb #688486 #688486
