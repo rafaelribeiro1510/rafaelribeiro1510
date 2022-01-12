@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/bin/bash
 # Detect if secondary monitor is connected, if so, add a specific bar and move tray to it
 # Else, keep tray on main monitor
 # see https://github.com/polybar/polybar/issues/763
@@ -13,16 +13,16 @@ set -- $outputs
 tray_output=$1
 
 for m in $outputs; do
-	if [ $m == $1 ] 
-	then		
-		MONITOR1=$m polybar --reload main &	
+	if [ $m == $1 ]
+	then
+		MONITOR1=$m polybar --reload main &
 	elif [ $m == $2 ]
 	then
 	    tray_output=$m
 		MONITOR2=$m polybar --reload secondary &
 	else
 		MONITOR1=$m polybar --reload main &
-  fi
+	fi
 done
 
 for m in $outputs; do
@@ -34,6 +34,3 @@ if [[ $m == $tray_output ]]; then
 fi
 done
 
-sleep 1;
-
-polybar i3wmthemer_bar &
