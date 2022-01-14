@@ -184,6 +184,9 @@ exec google-chrome
 exec discord
 exec github-desktop
 
+# Bluetooth service
+exec --no-startup-id blueman-applet
+
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
