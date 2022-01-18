@@ -1,6 +1,6 @@
 set $mod Mod1
 
-new_window pixel 2
+new_window pixel 1
 new_float normal
 
 hide_edge_borders none
@@ -175,7 +175,7 @@ for_window [class="(?i)Blueman-manager"] floating enable border normal
 for_window [class="Yad" title="yad-calendar"] floating enable border normal
 
 # Open specific applications in certain workspaces
-assign [class="google-chrome"] $ws1
+assign [class="(?i)google-chrome"] $ws1
 assign [class="discord"] $ws2
 assign [class="GitHub Desktop"] $ws3
 
@@ -250,7 +250,7 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
 
 # Theme colors
-client.focused          #ff007f #282a36 #b0c4bb #b0c4bb #ff007f
+client.focused          #ff007f #282a36 #b0c4bb #b0c4bb #ff79c6
 client.focused_inactive #b0c4bb #282a36 #b0c4bb #688486 #688486
 client.unfocused        #b0c4bb #282a36 #b0c4bb #688486 #688486
 client.urgent           #b0c4bb #282a36 #b0c4bb #688486 #688486
@@ -259,10 +259,11 @@ client.placeholder      #b0c4bb #282a36 #b0c4bb #688486 #688486
 client.background #282a36
 
 # Gaps
-gaps inner 6
-gaps outer -4
+gaps inner 4
+gaps outer 2
 
-smart_gaps on
+#smart_gaps on
+#smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
