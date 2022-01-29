@@ -337,5 +337,6 @@ bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipbo
 exec killall -q notify-osd
 exec --no-startup-id dunst -config ~/.config/dunst/config
 
-
+# Low battery warning script
+exec --no-startup-id ~/.config/i3/scripts/i3-battery-popup -n -s ~/.config/i3/scripts/i3-battery-popup.wav
 
