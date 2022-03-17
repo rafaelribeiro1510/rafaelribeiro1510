@@ -180,6 +180,10 @@ for_window [class="Yad" title="yad-calendar"] floating enable border normal
 assign [class="(?i)google-chrome"] $ws1
 assign [class="discord"] $ws2
 assign [class="GitHub Desktop"] $ws3
+assign [instance="Godot_Editor"] $ws4
+for_window [instance="Godot_Engine"] floating enable
+for_window [instance="Godot_Editor"] floating disable
+
 
 # Open on startup
 exec google-chrome
@@ -341,4 +345,7 @@ exec --no-startup-id dunst -config ~/.config/dunst/config
 
 # Low battery warning script
 exec --no-startup-id ~/.config/i3/scripts/i3-battery-popup -n -s ~/.config/i3/scripts/i3-battery-popup.wav
+
+# Timeout to lock screen & suspend
+exec --no-startup-id ~/.config/i3/scripts/lock.sh
 
