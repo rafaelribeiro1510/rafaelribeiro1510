@@ -92,7 +92,7 @@ set $monitor1 eDP-1
 set $monitor2 HDMI-2
 
 # Startup second monitor
-exec --no-startup-id xrandr --output $monitor2 --above $monitor1
+exec_always --no-startup-id xrandr --output $monitor2 --above $monitor1
 
 # workspaces
 set $ws1 1
