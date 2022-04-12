@@ -352,3 +352,10 @@ exec --no-startup-id ~/.config/i3/scripts/i3-battery-popup -n -s ~/.config/i3/sc
 # Timeout to lock screen & suspend
 exec --no-startup-id ~/.config/i3/scripts/lock.sh
 
+# Keyring for saved passwords
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
+
+# Authentication agent
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+
